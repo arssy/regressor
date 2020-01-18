@@ -62,7 +62,7 @@ If you are using mongoid please add [mongoid-rspec](https://github.com/mongoid-r
 
 # Usage
 ###### Run the generator:
-Be sure to run the generators in the `test` environment so that `development`-only gems are not being loaded, causing strange issues with controller filters and ActiveRecord callbacks.
+Be sure to run the generators in the `test` environment so that `development`-only gems are not being loaded, causing strange issues with controller actions and ActiveRecord callbacks.
 
 ##### ActiveRecord 
 ```ruby
@@ -117,9 +117,9 @@ Empty factories can be created.
 ###### Controllers
  - Routing
  - Callbacks
-   - Before filter
-   - After filter
-   - Around filter
+   - Before action
+   - After action
+   - Around action
 
 # Also see
 [Airpair - Generate specs for your Rails application](https://www.airpair.com/rspec/posts/gert) 

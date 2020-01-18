@@ -1,10 +1,10 @@
 module Regressor
   module Controller
     module Callback
-      module BeforeFilter
+      module BeforeAction
         def before_callbacks
-          before_filters.map do |filter_name|
-            "it { should use_before_filter(#{filter_name}) }"
+          before_actions.map do |action_name|
+            "it { should use_before_action(#{action_name}) }"
           end.compact.uniq.join("\n  ")
         end
       end

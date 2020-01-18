@@ -1,10 +1,10 @@
 module Regressor
   module Controller
     module Callback
-      module AroundFilter
+      module AroundAction
         def around_callbacks
-          around_filters.map do |filter_name|
-            "it { should use_around_filter(#{filter_name}) }"
+          around_actions.map do |action_name|
+            "it { should use_around_action(#{action_name}) }"
           end.compact.uniq.join("\n  ")
         end
       end
