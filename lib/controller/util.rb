@@ -20,7 +20,7 @@ module Regressor
         all_actions = controller._process_action_callbacks
         all_actions = all_actions.select { |f| f.kind == kind } if kind
         # Reject procs
-        all_actions = all_actions.map(&:raw_action).reject{|action| action.class == Proc}
+        all_actions = all_actions.map(&:raw_filter).reject{|action| action.class == Proc}
         all_actions.map {|action| action.is_a?(Symbol) ? ":#{action}" : action.to_s}
       end
     end
